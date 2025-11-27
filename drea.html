@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zandrea Marin- Presentation</title>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+    /* FONT */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ffe6f0; /* soft pink background */
+        overflow-x: hidden;
+        color: #4d0033;
+    }
+
+    /* SMOKE EFFECT */
+    .smoke, .smoke2, .smoke3 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(255,182,193,0.3) 0%, rgba(255,182,193,0) 70%);
+        border-radius: 50%;
+        animation: float 10s linear infinite;
+    }
+    .smoke2 { left: 30%; top: 20%; animation-duration: 15s; }
+    .smoke3 { left: 60%; top: 50%; animation-duration: 12s; }
+
+    @keyframes float {
+        0% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(-50px) translateX(30px); }
+        100% { transform: translateY(0) translateX(0); }
+    }
+
+    /* PRESENTATION CONTAINER */
+    .presentation-container {
+        position: relative;
+        width: 80%;
+        max-width: 900px;
+        margin: 100px auto;
+        padding: 30px;
+        background: rgba(255, 240, 245, 0.9);
+        border-radius: 20px;
+        box-shadow: 0 0 50px rgba(255, 105, 180, 0.4);
+        text-align: center;
+        overflow: hidden;
+    }
+
+    /* PROFILE IMAGE */
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 5px solid #ff66a3;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    /* NAME TITLE */
+    .name-title { font-size: 2.5rem; font-weight: 700; color: #ff1a75; position: relative; }
+
+    .sparks span {
+        position: absolute;
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: #ff80bf;
+        border-radius: 50%;
+        animation: spark 1.5s infinite;
+    }
+
+    @keyframes spark {
+        0%, 100% { transform: translate(0,0) scale(0.5); opacity: 1; }
+        50% { transform: translate(20px,-20px) scale(1); opacity: 0; }
+    }
+
+    .description { font-size: 1rem; line-height: 1.6; margin: 20px 0; }
+
+    /* SOCIAL ICONS */
+    .social-links { margin: 20px 0; }
+    .social-icon {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 10px;
+        border-radius: 50%;
+        background: #ff66a3;
+        color: white;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    .social-icon:hover { transform: scale(1.2); background: #ff1a75; }
+
+    /* CONTACT INFO */
+    .contact-info p { margin: 8px 0; font-size: 0.95rem; }
+    .contact-info i { margin-right: 8px; color: #ff1a75; }
+
+    /* BACK BUTTON */
+    .back-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #ff66a3;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+    }
+    .back-btn:hover { background: #ff1a75; transform: scale(1.1); }
+
+    /* ANIMATIONS */
+    .fade-in { animation: fadeIn 2s ease forwards; }
+    .slide-up { opacity: 0; transform: translateY(20px); animation: slideUp 1s forwards; animation-delay: 0.5s; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* FLOATING HEARTS */
+    .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #ff66a3;
+        transform: rotate(-45deg);
+        animation: floatHeart 5s linear infinite;
+    }
+    .heart::before, .heart::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #ff66a3;
+        border-radius: 50%;
+    }
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { top: 0; left: 10px; }
+
+    @keyframes floatHeart {
+        0% { transform: translateY(0) rotate(-45deg); opacity: 1; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(-600px) rotate(-45deg); opacity: 0; }
+    }
+    </style>
+</head>
+<body>
+
+<!-- MOVING SOFT SMOKE -->
+<div class="smoke"></div>
+<div class="smoke smoke2"></div>
+<div class="smoke smoke3"></div>
+
+<!-- FLOATING HEARTS -->
+<div class="heart" style="left:10%; animation-delay:0s;"></div>
+<div class="heart" style="left:30%; animation-delay:1s;"></div>
+<div class="heart" style="left:50%; animation-delay:2s;"></div>
+<div class="heart" style="left:70%; animation-delay:3s;"></div>
+<div class="heart" style="left:90%; animation-delay:4s;"></div>
+
+<div class="presentation-container fade-in">
+
+    <!-- PROFILE LOGO / IMAGE -->
+    <img src="https://img.sanishtech.com/u/644234efa7e2fb6d72353a3d9f40cc76.jpg" class="profile-pic slide-up">
+
+    <!-- NAME WITH SPARKS -->
+    <div class="text-box slide-up">
+        <h1 class="name-title">Zandrea Marin</h1>
+        <div class="sparks">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+
+
+    <p class="slide-up description">
+        <p>Hey, babe!<p>
+  I am <strong> Zandrea G. Marin</strong>, a student from <strong>Bestlink College of the Philippines</strong> currently pursuing a <strong>Bachelor of Science in Information Technology</strong>. As an aspiring IT professional, I am passionate about web development, 
+  leadership, and continuous learning. </p>
+    
+   <div class="social-links">
+            <a href="https://www.facebook.com/share/17uuwTeVjT/?mibextid=wwXIfr/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/zandrrea/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@blythe/" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+    <div class="contact-info slide-up">
+        <p><i class="fas fa-envelope"></i> Email: marinzandrea43@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Contact: 09198333698</p>
+        <p><i class="fas fa-map-marker-alt"></i> Quezon City</p>
+    </div>
+
+  
+    <a href="index.html" class="back-btn slide-up">⬅ Back to Team</a>
+
+</div>
+
+</body>
+</html>
